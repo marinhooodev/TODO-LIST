@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+and,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea,
+select {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+body {
+  line-height: 1;
+  user-select: none;
+  font-family: "Poppins";
+  min-height: 100vh;
+  min-width: 100%;
+  background: url(/images/mountain-background.jpg);
+  background-position: center;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+#mainBox {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toDoBox {
+  min-height: 700px;
+  width: 50vw;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+#toDoBox h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  color: white;
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.514);
+  padding: 10px 0 20px 0;
+}
+#toDoBox h2 {
+  font-size: 20px;
+  color: white;
+  text-shadow: -2px 2px rgba(0, 0, 0, 0.514);
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+#todoContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#inputBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#InputPadrao {
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  font-family: "Poppins";
+}
+#InputPadrao::placeholder {
+  color: gray;
+}
+
+.plusIcon {
+  color: white;
+  padding: 7px;
+  border-radius: 50px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.plusIcon:active {
+  transform: scale(0.5);
+}
+
+.listBox {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.listBox ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: -webkit-fill-available;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+.listBox ul::-webkit-scrollbar {
+  display: none;
+}
+.listBox ul li {
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 5px;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s;
+  opacity: 1;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.listBox ul li .task-title {
+  padding-left: 5px;
+  text-shadow: -1px 2px rgba(0, 0, 0, 0.514);
+  color: white;
+  font-size: 18px;
+}
+.listBox ul li .task-title.checkedTask {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.3);
+}
+.listBox ul li:nth-child(1) {
+  border-top: none;
+}
+.listBox ul li .trashIcon {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 7px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.2s linear, background 0.2s linear, transform 0.2s ease;
+}
+.listBox ul li .trashIcon:active {
+  transform: scale(0.5);
+}
+.listBox ul li .trashIcon:hover {
+  color: red;
+  background-color: white;
+}
